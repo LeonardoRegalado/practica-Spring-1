@@ -14,7 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
 // DESDE LA RUTA
 public class PalindromoController {
 
-    //ESTE METODO INVIERTE LA PALABRA Y LA COMPARA CON LA ORIGINAL PARA SABER SI ES UN PALINDROMOS
+    
+    /**
+     * ESTE METODO INVIERTE LA PALABRA Y LA COMPARA CON LA ORIGINAL PARA SABER SI ES UN PALINDROMOS
+     * @param palabra La palabra a verificar
+     * @return un mensaje indicando si la palabra es palindromo o no
+     */
     @GetMapping("/palindromo/{palabra}")
     public String verificarPalindromo(@PathVariable String palabra) {
         if (palabra.equals(invertir(palabra))) {
@@ -34,9 +39,14 @@ public class PalindromoController {
         return new String(cadenaInvertida) ;
     }
 
-// ESTE METODO UTILIZA DOS INDICES PARA PODER RECORRER LA PALABRA 
-// DESDE EL INICIO Y UNA DESDE EL FINAL, COMPARANDO QUE LAS LETRAS EN AMBOS
-// INDICES SEAN IGUALES Y ASI DECIDIR SI ES UN PALINDROMO
+
+/**
+ *  ESTE METODO UTILIZA DOS INDICES PARA PODER RECORRER LA PALABRA
+    *DESDE EL INICIO Y UNA DESDE EL FINAL, COMPARANDO QUE LAS LETRAS EN AMBOS 
+    *INDICES SEAN IGUALES Y ASI DECIDIR SI ES UN PALINDROMO 
+    * @param palabra La palabra a verificar
+    * @return un mensaje indicando si la palabra es palindromo o no
+ */
     @GetMapping("/palindrome/{palabra}")
     public String verificarPalindromo2(@PathVariable String palabra) {
         return verirficarPalabra(palabra);  
