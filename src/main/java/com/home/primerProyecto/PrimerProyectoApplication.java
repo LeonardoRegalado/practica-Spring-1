@@ -1,5 +1,4 @@
 package com.home.primerProyecto;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController //Marcar uina clase como un controlador para trabjaar con metodos http
 @RequestMapping("/principal")
 public class PrimerProyectoApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(PrimerProyectoApplication.class, args);	
 	}	
@@ -25,7 +23,7 @@ public class PrimerProyectoApplication {
 	@GetMapping("/registro")
     public String Mensaje(){
         return "Aqui estaran los bancos";
-    }
+    } 
 
     @GetMapping("/datos/{nombre}/{pais}")
     public String imprimirBanco(@PathVariable String nombre, @PathVariable String pais){
@@ -42,6 +40,5 @@ public class PrimerProyectoApplication {
     public String obtenerNombre(@PathVariable String name) {
         return "Aqui tienes al banco: "+ name;
     }
-
 
 }

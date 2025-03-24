@@ -35,8 +35,6 @@ public class PalindromoService {
         return "La palabra "+palabra+" es un palindromo";
     }
 
-
-
     /**
      * ESTE METODO INVIERTE LA PALABRA Y LA COMPARA CON LA ORIGINAL PARA SABER SI ES UN PALINDROMOS
      * @param cadena La palabra a verificar
